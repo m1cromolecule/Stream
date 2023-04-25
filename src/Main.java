@@ -20,7 +20,6 @@ public class Main {
         System.out.println("1");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-//                      1
 
         List<User> userDtos1 = users.stream()
                 .sorted(Comparator.comparingInt(User::getAge))
@@ -31,7 +30,6 @@ public class Main {
         System.out.println("2");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-//                      2
 
         List<User> userDtos2 = users.stream()
                 .filter(u -> u.getId() % 2 == 0)
@@ -41,8 +39,6 @@ public class Main {
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
         System.out.println("3");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-//                         3
 
 
         List<User> userDtos3 = users.stream()
@@ -54,7 +50,6 @@ public class Main {
         System.out.println("4");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
-//                            4
 
         List<User> userDtos4 = users.stream()
                 .filter(userDto -> userDto.getEmail().endsWith(".com"))
@@ -65,6 +60,7 @@ public class Main {
         System.out.println("5");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
+        
         List<String> userDtos5 = users.stream()
                 .map(User::getEmail)
                 .toList();
@@ -85,11 +81,10 @@ public class Main {
         System.out.println("7");
 //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
+        
         Map<String, String> userDtos7 = users.stream()
                 .collect(Collectors.toMap(User::getLogin, User::getEmail));
         System.out.println(userDtos7);
-
-
 
     }
 }
